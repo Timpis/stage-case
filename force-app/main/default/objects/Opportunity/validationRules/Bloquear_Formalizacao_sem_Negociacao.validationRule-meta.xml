@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bloquear_Formalizacao_sem_Negociacao</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(StageName, &apos;Formalização&apos;),
+    ISBLANK(Valor_da_proposta__c)
+)</errorConditionFormula>
+    <errorMessage>Informe o valor da proposta antes de avançar para Formalização.
+Bloquear_Negociacao_sem_Qualificacao</errorMessage>
+</ValidationRule>

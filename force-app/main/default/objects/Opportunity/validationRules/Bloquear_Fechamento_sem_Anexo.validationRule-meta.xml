@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bloquear_Fechamento_sem_Anexo</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(StageName, &apos;Fechado - Ganhou&apos;),
+    NOT(Documentos_Anexados__c)
+)</errorConditionFormula>
+    <errorMessage>Anexe os documentos assinados antes de fechar a oportunidade.</errorMessage>
+</ValidationRule>

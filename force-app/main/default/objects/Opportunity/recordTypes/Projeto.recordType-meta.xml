@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Projeto</fullName>
+    <active>true</active>
+    <businessProcess>Stage Consulting - Projetos</businessProcess>
+    <description>Oportunidades de projetos de tecnologia</description>
+    <label>Projeto</label>
+    <picklistValues>
+        <picklist>DeliveryInstallationStatus__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yet to begin</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tecnologia_do_Projeto__c</picklist>
+        <values>
+            <fullName>C%23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JavaScript</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Customer - Downgrade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer - Replacement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer - Upgrade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Customer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
