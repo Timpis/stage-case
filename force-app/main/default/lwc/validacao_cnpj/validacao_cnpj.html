@@ -1,0 +1,13 @@
+<template>
+    <div class="container">
+        <lightning-button
+            label="Validar CNPJ"
+            variant="brand"
+            onclick={handleValidar}>
+        </lightning-button>
+
+        <span class={statusClass}>
+            {statusEmoji} {status}
+        </span>
+    </div>
+</template>

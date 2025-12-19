@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Stage Consulting</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0176d3, #005fb2);
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            background: #fff;
+            width: 100%;
+            max-width: 420px;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0,0,0,.25);
+        }
+
+        h2 { margin-top: 0; color: #032d60; }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        button {
+            background: #0176d3;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Fale com a Stage Consulting</h2>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+          method="POST">
+
+        <!-- DEBUG (MOSTRA ERRO NA TELA) -->
+        <input type="hidden" name="debug" value="1">
+
+        <!-- ORG ID -->
+        <input type="hidden" name="oid" value="00Daj00000hxPzL">
+
+        <!-- RETORNO -->
+        <input type="hidden" name="retURL" value="http://127.0.0.1:5500/landing/index.html">
+
+        <input type="text" name="last_name" placeholder="Nome" required>
+        <input type="text" name="company" placeholder="Empresa" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="CNPJ__c" placeholder="CNPJ">
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+</body>
+</html>

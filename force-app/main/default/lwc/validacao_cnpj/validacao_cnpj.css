@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.status {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.status-error {
+    color: #c23934;
+}
+
+.status-success {
+    color: #2e844a;
+}

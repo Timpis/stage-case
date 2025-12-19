@@ -1,0 +1,103 @@
+<template>
+    <lightning-card>
+
+        <!-- HEADER CUSTOM -->
+        <div class="slds-card__header slds-grid slds-grid_align-spread">
+            <div class="slds-media slds-media_center slds-has-flexi-truncate">
+
+                <!-- MENU DE AÇÕES -->
+                <div class="slds-media__figure">
+                    <lightning-button-menu
+                        menu-alignment="right"
+                        alternative-text="Ações">
+
+                        <lightning-menu-item
+                            label="Gerar NDA"
+                            onclick={gerarNda}>
+                        </lightning-menu-item>
+
+                        <lightning-menu-item
+                            label="Gerar Proposta"
+                            onclick={gerarProposta}>
+                        </lightning-menu-item>
+
+                    </lightning-button-menu>
+                </div>
+
+                <!-- TÍTULO -->
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <span class="slds-text-heading_small">
+                            Documentos da Oportunidade
+                        </span>
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- BODY -->
+        <div class="slds-p-around_medium">
+
+            <!-- ================= NDA / PROPOSTA ================= -->
+            <h3 class="slds-text-heading_small slds-m-bottom_x-small">
+                NDA / Proposta
+            </h3>
+
+            <lightning-file-upload
+                record-id={recordId}
+                accept=".pdf"
+                onuploadfinished={handleUploadFinished}>
+            </lightning-file-upload>
+
+            <div class="slds-m-top_medium">
+                <lightning-datatable
+                    key-field="id"
+                    data={documentos}
+                    columns={columns}
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column>
+                </lightning-datatable>
+            </div>
+
+            <hr class="slds-m-vertical_medium"/>
+
+            <!-- ================= ENVIO DE EMAIL ================= -->
+            <lightning-button
+                label="Enviar para o e-mail do cliente"
+                variant="brand"
+                onclick={enviarEmail}>
+            </lightning-button>
+
+            <template if:true={emailStatus}>
+                <p class={emailStatusClass} style="margin-top:8px;">
+                    {emailStatus}
+                </p>
+            </template>
+
+            <hr class="slds-m-vertical_medium"/>
+
+            <!-- ================= DOCUMENTOS ASSINADOS ================= -->
+            <h3 class="slds-text-heading_small slds-m-bottom_x-small">
+                Documentos Assinados
+            </h3>
+
+            <lightning-file-upload
+                record-id={recordId}
+                accept=".pdf"
+                onuploadfinished={handleUploadAssinadoFinished}>
+            </lightning-file-upload>
+
+            <div class="slds-m-top_medium">
+                <lightning-datatable
+                    key-field="id"
+                    data={documentosAssinados}
+                    columns={columns}
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column>
+                </lightning-datatable>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>
